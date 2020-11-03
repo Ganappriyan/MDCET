@@ -21,10 +21,10 @@ public class WelcomeScreen extends JFrame {
         mdcetButton.setBounds(175, 250, 150, 60);
         add(mdcetButton);
 
-        JButton backButton = new JButton("Exit");
-        backButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
-        backButton.setBounds(320, 450, 80, 30);
-        add(backButton);
+        JButton exitButton = new JButton("Exit");
+        exitButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
+        exitButton.setBounds(320, 450, 80, 30);
+        add(exitButton);
 
         setVisible(true);
     }

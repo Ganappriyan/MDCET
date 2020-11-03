@@ -8,11 +8,11 @@ public class MainScreen extends JFrame {
 
         JLabel title = new JLabel("What do you like to view,", SwingConstants.CENTER);
         title.setFont(new Font("Ariel", Font.PLAIN, 20));
-        title.setBounds(100, 80, 300, 100);
+        title.setBounds(100, 30, 300, 100);
         add(title);
 
-        JPanel options = new JPanel(new GridLayout(3, 1, 0, 30));
-        options.setBounds(150, 200, 200, 300);
+        JPanel options = new JPanel(new GridLayout(3, 1, 0, 40));
+        options.setBounds(180, 150, 170, 250);
 
         JButton departmentButton = new JButton("Department");
         departmentButton.setFont(new Font("Ariel", Font.PLAIN, 15));
@@ -27,6 +27,11 @@ public class MainScreen extends JFrame {
         options.add(updatesButton);
 
         add(options);
+
+        JButton backButton = new JButton("Back");
+        backButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
+        backButton.setBounds(320, 450, 80, 30);
+        add(backButton);
 
         setVisible(true);
     }

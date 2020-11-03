@@ -11,12 +11,17 @@ public class MainScreen extends JFrame {
         title.setBounds(100, 30, 300, 100);
         add(title);
 
-        JPanel options = new JPanel(new GridLayout(3, 1, 0, 40));
-        options.setBounds(170, 140, 160, 250);
+        JPanel options = new JPanel(new GridLayout(3, 1, 0, 30));
+        options.setBounds(150, 140, 200, 250);
 
         JButton departmentButton = new JButton("Department");
         departmentButton.setFont(new Font("Ariel", Font.PLAIN, 17));
         options.add(departmentButton);
+        departmentButton.addActionListener(e -> {
+            options.setLayout(new GridLayout(4, 1, 0, 30));
+            options.add(new departmentPanel(), 1);
+            options.revalidate();
+        });
 
         JButton facultyButton = new JButton("Faculty");
         facultyButton.setFont(new Font("Ariel", Font.PLAIN, 17));
@@ -34,6 +39,24 @@ public class MainScreen extends JFrame {
         add(backButton);
 
         setVisible(true);
+    }
+}
+
+class departmentPanel extends JPanel {
+    departmentPanel() {
+        setLayout(new GridLayout(1, 3, 10, 0));
+
+        JButton cseButton = new JButton("CSE");
+        cseButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
+        add(cseButton);
+
+        JButton eceButton = new JButton("ECE");
+        eceButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
+        add(eceButton);
+
+        JButton eeeButton = new JButton("EEE");
+        eeeButton.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
+        add(eeeButton);
     }
 }
 

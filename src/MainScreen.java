@@ -7,23 +7,23 @@ public class MainScreen extends JFrame {
         setLayout(null);
 
         JLabel title = new JLabel("What do you like to view,", SwingConstants.CENTER);
-        title.setFont(new Font("Ariel", Font.PLAIN, 20));
+        title.setFont(new Font("Ariel", Font.PLAIN, 22));
         title.setBounds(100, 30, 300, 100);
         add(title);
 
         JPanel options = new JPanel(new GridLayout(3, 1, 0, 40));
-        options.setBounds(180, 150, 170, 250);
+        options.setBounds(170, 140, 160, 250);
 
         JButton departmentButton = new JButton("Department");
-        departmentButton.setFont(new Font("Ariel", Font.PLAIN, 15));
+        departmentButton.setFont(new Font("Ariel", Font.PLAIN, 17));
         options.add(departmentButton);
 
         JButton facultyButton = new JButton("Faculty");
-        facultyButton.setFont(new Font("Ariel", Font.PLAIN, 15));
+        facultyButton.setFont(new Font("Ariel", Font.PLAIN, 17));
         options.add(facultyButton);
 
         JButton updatesButton = new JButton("Updates");
-        updatesButton.setFont(new Font("Ariel", Font.PLAIN, 15));
+        updatesButton.setFont(new Font("Ariel", Font.PLAIN, 17));
         options.add(updatesButton);
 
         add(options);
